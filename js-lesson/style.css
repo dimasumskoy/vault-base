@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3#hello {
+  color: #DFA200;
+}
+
+div.content, div#quote_block {
+  width: 50%;
+  display: inline-block;
+}
+
+p.quote {
+  padding: 10px;
+  background-color: #F5F5F5;
+}
+
+p.quote small.quote-author {
+  color: #B5B5B5;
+}

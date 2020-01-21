@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>My First Page</title>
+  </head>
+  <body>
+    <h3 class='hello-title' id='hello'>Hello</h3>
+    <p>This is my first web page</p>
+    <div class='content'>
+      <p>My favourite quote is:</p>
+      <p class='quote'>
+        <i id='quote_text'>Talk is cheap. Show me <b>the code.</b></i>
+        <br>
+        <small class='quote-author'>- <span id='quote_author'>Linus Torvalds</span></small>
+      </p>
+      <a href='' id='quote_link'>Change Quote</a>
+    </div>
+
+    <div id='quote_block' style='display: none;'>
+      <form action=''>
+        <label for='text_field'>New quote:</label>
+        <input name='text_field'>
+
+        <label for='author_field'>Author:</label>
+        <input name='author_field'>
+
+        <input type='submit' value='Save'>
+      </form>
+    </div>
+
+    <script>
+      const quoteLink = document.getElementById('quote_link');
+      const quoteBlock = document.getElementById('quote_block');
+      const form = document.querySelector('form');
+
+      quoteLink.onclick = function (e) {
+        e.preventDefault();
+
+        if (quoteBlock.style.display === 'none') {
+          quoteBlock.style.display = 'inline-block';
+        } else {
+          quoteBlock.style.display = 'none';
+        }
+      };
+
+      form.onsubmit = function (e) {
+        e.preventDefault();
+
+        document.getElementById('quote_text').innerText = this.elements.text_field.value;
+        document.getElementById('quote_author').innerText = this.elements.author_field.value;
+
+        quoteBlock.style.display = 'none';
+      };
+    </script>
+  </body>
+</html>
