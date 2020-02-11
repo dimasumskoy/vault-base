@@ -26,16 +26,13 @@
         <label for='author_field'>Author:</label>
         <input name='author_field'>
 
+        <input name="file" id="file" type="file">
         <input type='submit' value='Save'>
       </form>
     </div>
 
     <script>
-      const quoteLink = document.getElementById('quote_link');
-      const quoteBlock = document.getElementById('quote_block');
-      const form = document.querySelector('form');
-
-      quoteLink.onclick = function (e) {
+      function toggleForm() {
         e.preventDefault();
 
         if (quoteBlock.style.display === 'none') {
@@ -43,7 +40,13 @@
         } else {
           quoteBlock.style.display = 'none';
         }
-      };
+      }
+
+      const quoteLink = document.getElementById('quote_link');
+      const quoteBlock = document.getElementById('quote_block');
+      const form = document.querySelector('form');
+
+      quoteLink.onclick = toggleForm(e);
 
       form.onsubmit = function (e) {
         e.preventDefault();

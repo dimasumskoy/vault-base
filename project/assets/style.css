@@ -1,0 +1,113 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+header {
+  width: 100%;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+ul#header_menu {
+  margin: 0;
+  padding: 0;
+}
+
+ul#header_menu li {
+  display: inline-block;
+}
+
+ul#header_menu li a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+main {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #eeeeee;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+}
+
+main aside {
+  width: 25%;
+  padding: 10px;
+}
+
+main section {
+  width: 75%;
+  padding: 10px;
+}
+
+#profile_info img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#posts {
+  margin-top: 20px;
+}
+
+#posts .post {
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+#posts .post h4 {
+  margin: 5px 0;
+}
+
+div.post-links {
+  text-align: right;
+}
+
+ul#profile_links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul#profile_links li a {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+}
+
+a.edit-link {
+  background-color: orange;
+}
+
+a.vk {
+  background-color: #587EA3;
+}
+
+a.facebook {
+  background-color: #3B5998;
+}
+
+a.instagram {
+  background-color: #3F729B;
+}
